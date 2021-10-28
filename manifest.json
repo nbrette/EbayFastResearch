@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2, 
+    "name": "Ebay research", 
+    "description": "Quick research on ebay", 
+    "version": "1.0", 
+    "permissions": [ 
+     "http://*/*",
+     "https://*/*",
+     "tabs"
+    ],
+    "browser_action": {   
+     "default_icon" : "ebay.png", 
+     "default_popup": "popup.html" 
+    },
+    "icons": { 
+     "128" : "ebay_icon.png" 
+    },
+    "content_security_policy": "script-src 'self' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://code.jquery.com ; object-src 'self';"
+
+    
+   }
