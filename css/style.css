@@ -1,0 +1,75 @@
+@font-face { font-family: coda; src: url('Coda-Regular.ttf'); } 
+
+body {
+    min-width: 400px;
+    max-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px !important;
+    border-radius: 5px;
+    font-family: coda;
+}
+
+#researchArea {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#research {
+    width: 70%;
+
+}
+
+#btn {
+    width: 20%;
+    background-color: #0064D2 !important;
+    border:#0064D2 !important;
+}
+
+#btn:hover{
+    opacity: 0.8;
+}
+
+
+.options {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+#extensionList {
+    max-width: 25%;
+    display: flex;
+}
+
+#locationList {
+    min-width: 40%;
+    display: flex;
+}
+
+#sold {
+    margin-top: 6px;
+    max-width: 30%;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+.form-control:focus{
+    border: 1px solid #0064D2;
+    box-shadow: inset 0 1px 1px #0064D2, 0 0 5px #0064D2;
+}
+
+
+

@@ -13,9 +13,14 @@
      "default_popup": "popup.html" 
     },
     "icons": { 
-     "128" : "ebay_icon.png" 
+     "256" : "ebay.png" 
     },
-    "content_security_policy": "script-src 'self' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://code.jquery.com ; object-src 'self';"
-
+    "content_security_policy": "script-src 'self' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://code.jquery.com ; object-src 'self';",
     
+    "content_scripts": [
+        {
+            "matches": ["http://*/*"],
+            "css": ["./css/style.css"]
+        }
+    ]
    }
