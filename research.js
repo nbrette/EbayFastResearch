@@ -6,17 +6,14 @@ const EU_LOCATION="EU";
 const WORLD_LOCATION="World";
 
 document.getElementById('btn').onclick = function(){
-    var form = document.forms["ebayResearch"];
-
-    var keywords = form.elements["research"].value;
-    var extension = form.elements["extension"].value;
-    var location = form.elements["location"].value;
-    var sold = form.elements["checkSold"].checked;
-
-    var tabKeywords = keywords.split(" ");
-    url = createUrl(extension, tabKeywords, sold, location);
-    chrome.tabs.create({ url: url });
+    run(document.forms["ebayResearch"]);
 }
+
+document.addEventListener('keypress', (event) => {
+    if (event.code == 'Enter'){
+        run(document.forms["ebayResearch"]);
+    }
+})
 
 document.getElementById('extension').onchange = function() {
     if (document.getElementById('extension').value == ".COM"){
@@ -78,4 +75,15 @@ function getSold(sold){
     }
 
     return soldString;
+}
+
+function run(form){
+    var keywords = form.elements["research"].value;
+    var extension = form.elements["extension"].value;
+    var location = form.elements["location"].value;
+    var sold = form.elements["checkSold"].checked;
+
+    var tabKeywords = keywords.split(" ");
+    url = createUrl(extension, tabKeywords, sold, location);
+    chrome.tabs.create({ url: url });
 }
