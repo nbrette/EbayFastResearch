@@ -10,7 +10,6 @@ const ELEMLOCATION="location";
 const ELEMRESEARCH="research";
 const ELEMSOLD="checkSold";
 
-
 document.getElementById('btn').onclick = function(){
     run(document.forms[FORMNAMME]);
 }
