@@ -10,6 +10,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
 
@@ -50,10 +52,12 @@
                 </div>
 
                 <div class="form-check form-switch" id="sold">
-                    <input class="form-check-input" type="checkbox" value="" id="checkSold" name="checkSold">
                     <label class="form-check-label" for="checkSold">
-                        Sold Items
+                        Sold items
                     </label>
+                    <input class="form-check-input" type="checkbox" checked data-toggle="toggle" data-size="sm" id="checkSold" data-on="Yes" data-off="No">
+                    <!-- <input class="form-check-input" type="checkbox" value="" id="checkSold" name="checkSold"> -->
+
                 </div>
             </div>
 

@@ -9,13 +9,13 @@
      "tabs"
     ],
     "browser_action": {   
-     "default_icon" : "ebay.png", 
+     "default_icon" : "images/ebay.png", 
      "default_popup": "popup.html" 
     },
     "icons": { 
-     "256" : "ebay.png" 
+     "256" : "images/ebay.png" 
     },
-    "content_security_policy": "script-src 'self' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://code.jquery.com ; object-src 'self';",
+    "content_security_policy": "script-src 'self' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://code.jquery.com https://cdn.jsdelivr.net ; object-src 'self';",
     
     "content_scripts": [
         {

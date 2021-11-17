@@ -9,6 +9,8 @@ Chrome extension to perform fast research on ebay with multiples criterias.
 - Selection of a location restriction (Default, Domestic, European Union, WorldWide)
 - Sold items
 
+If you select the american ebay (.com extension) you won't be able to choose the location restriction as this option is mainly for european.
+
 ## Installation
 
 From this repositiry:

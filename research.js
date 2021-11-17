@@ -4,24 +4,30 @@ const URL_LAST_PART="&_sacat=0";
 const COUNTRY_LOCATION="Country";
 const EU_LOCATION="EU";
 const WORLD_LOCATION="World";
+const FORMNAMME="ebayResearch";
+const ELEMEXTENSION="extension";
+const ELEMLOCATION="location";
+const ELEMRESEARCH="research";
+const ELEMSOLD="checkSold";
+
 
 document.getElementById('btn').onclick = function(){
-    run(document.forms["ebayResearch"]);
+    run(document.forms[FORMNAMME]);
 }
 
 document.addEventListener('keypress', (event) => {
     if (event.code == 'Enter'){
-        run(document.forms["ebayResearch"]);
+        run(document.forms[FORMNAMME]);
     }
 })
 
-document.getElementById('extension').onchange = function() {
-    if (document.getElementById('extension').value == ".COM"){
-        document.getElementById('location').selectedIndex = 0;
-        document.getElementById('location').disabled = true;
+document.getElementById(ELEMEXTENSION).onchange = function() {
+    if (document.getElementById(ELEMEXTENSION).value == ".COM"){
+        document.getElementById(ELEMLOCATION).selectedIndex = 0;
+        document.getElementById(ELEMLOCATION).disabled = true;
     }
     else{
-        document.getElementById('location').disabled = false;
+        document.getElementById(ELEMLOCATION).disabled = false;
     }
 }
 
@@ -31,7 +37,6 @@ function createUrl(extension, researchKeywords, sold, location){
     url+=URL_LAST_PART;
     url += getSold(sold);
     url += getLocationRestriction(location);
-
 
     return url;
 }
@@ -78,10 +83,10 @@ function getSold(sold){
 }
 
 function run(form){
-    var keywords = form.elements["research"].value;
-    var extension = form.elements["extension"].value;
-    var location = form.elements["location"].value;
-    var sold = form.elements["checkSold"].checked;
+    var keywords = form.elements[ELEMRESEARCH].value;
+    var extension = form.elements[ELEMEXTENSION].value;
+    var location = form.elements[ELEMLOCATION].value;
+    var sold = form.elements[ELEMSOLD].checked;
 
     var tabKeywords = keywords.split(" ");
     url = createUrl(extension, tabKeywords, sold, location);
